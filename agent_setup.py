@@ -51,11 +51,11 @@ def build_agent():
             "Do not claim an email was sent until the send_email tool returns success."
         ),
         middleware=[
-            PIIMiddleware(
-                "credit_card",
-                strategy="block",
-                apply_to_input=True,
-            ),
+            # PIIMiddleware(
+            #     "email",
+            #     strategy="block",
+            #     apply_to_input=True,
+            # ),
             HumanInTheLoopMiddleware(
                 interrupt_on={
                     "send_email": True,
