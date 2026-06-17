@@ -125,6 +125,7 @@ if pending_now and not st.session_state.get("pending_notice"):
         "Your email request is **pending admin approval**. "
         "An administrator must approve or reject it before the email can be sent."
     )
+    
 config = {"configurable": {"thread_id": st.session_state.thread_id}}
 snapshot = agent.get_state(config)
 
